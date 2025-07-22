@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta name="author" content="George Poelcher III">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
 
         <title>Wunderlust Travel</title>
@@ -9,6 +10,8 @@
 
     <body>
         <header>
+            <a href="#main-content">Skip to Main Content</a>
+
             <h1>Wunderlust Travel</h1>
             <img src="" alt="logo for Wunderlust Travel"> <!--ADD LOGO HERE-->
             <p>Let Wunderlust Travel help you plan the trip of your dreams!</p>
@@ -23,7 +26,7 @@
             </nav>
         </header>
 
-        <main>
+        <main id="main-content">
             <section id="majorca">
                 <h2>Majorca</h2>
                 <p>
@@ -34,51 +37,263 @@
                 </p>
 
                 <!--ADD THREE IMAGES HERE (WAVES, BEACH, COVE)-->
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+               <picture>
+                    <source media="(max-width: 320px)" srcset="images/majorca-waves-S.png">
+                    <source media="(max-width: 780px)" srcset="images/majorca-waves-M.png">
+                    <img src="images/majorca-waves-L.png" alt="waves along a shoreline">
+               </picture>
 
-                <!--PLan Your Trip-->
-                <section id="plan">
-                    <h3>Plan Your Trip</h3>
+                <picture>
+                    <source media="(max-width: 320px)" srcset="images/majorca-beach-S.png">
+                    <source media="(max-width: 780px)" srcset="images/majorca-beach-M.png">
+                    <img src="images/majorca-beach-L.png" alt="beach within a cove of an island">
+               </picture>
 
-                    <section id="get-there">
-                        <h4>How to Get There</h4>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plane" width="150" height="150" viewBox="0 0 24 24" stroke-width="1" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3z" />
-                        </svg>
+                <picture>
+                    <source media="(max-width: 320px)" srcset="images/majorca-cove-S.png">
+                    <source media="(max-width: 780px)" srcset="images/majorca-cove-M.png">
+                    <img src="images/majorca-cove-L.png" alt="waves along a shoreline">
+               </picture>
+            </section>
 
-                        <a href="#">
+            <!--PLan Your Trip-->
+            <section id="plan">
+                <h2>Plan Your Trip</h2>
+
+                <section id="get-there">
+                    <h3>How to Get There</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plane" width="150" height="150" viewBox="0 0 24 24" stroke-width="1" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3z" />
+                    </svg>
+
+                    <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <title>Search for flights</title>
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <polyline points="9 6 15 12 9 18" />
+                    </svg>
+                    </a>
+                </section>
+
+                <section id="places-to-stay">
+                    <h3>Places to Stay</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bed" width="150" height="150" viewBox="0 0 24 24" stroke-width="1" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 7v11m0 -4h18m0 4v-8a2 2 0 0 0 -2 -2h-8v6" />
+                        <circle cx="7" cy="10" r="1" />
+                    </svg>
+
+                    <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <title>Search for flights</title>
+                            <title>Search for Hotels</title>
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <polyline points="9 6 15 12 9 18" />
                         </svg>
-                        </a>
-                    </section>
+                    </a>
+                </section>
+                    
+                <section id="things-to-do">
+                    <h3>Things to Do</h3>
 
-                    <section id="places-to-stay">
-                        <h4>Places to Stay</h4>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bed" width="150" height="150" viewBox="0 0 24 24" stroke-width="1" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sailboat"
+                    width="150" height="150" viewBox="0 0 24 24" stroke-width="1" stroke="#00bfd8" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M2 20a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4
+                        2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0
+                        0 0 2 -1" />
+                        <path d="M4 18l-1 -3h18l-1 3" />
+                        <path d="M11 12h7l-7 -9v9" />
+                        <line x1="8" y1="7" x2="6" y2="12" />
+                    </svg>
+
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right"
+                            width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="#00bfd8" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <title>Search for Activities</title>
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M3 7v11m0 -4h18m0 4v-8a2 2 0 0 0 -2 -2h-8v6" />
-                            <circle cx="7" cy="10" r="1" />
+                            <polyline points="9 6 15 12 9 18" />
                         </svg>
+                    </a>
+                </section>
 
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <title>Search for Hotels</title>
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <polyline points="9 6 15 12 9 18" />
-                            </svg>
-                        </a>
-                    </section>
+                <section id="where-to-eat">
+                    <h3>Where to Eat</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools-kitchen-2"
+                        width="150" height="150" viewBox="0 0 24 24" stroke-width="1" stroke="#00bfd8" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12zm0 12v6h-1v-3m-10 -14v17m-3
+                        -17v3a3 3 0 1 0 6 0v-3" />
+                    </svg>
+
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right"
+                        width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="#00bfd8" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                            <title>Search for Restaurants</title>
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <polyline points="9 6 15 12 9 18" />
+                        </svg>
+                    </a>
+                </section>
+            </section>
+
+            <!--Testimonials-->
+            <!--TO-DO: IMPLEMENT PHOTOS AND SCALING SIZES-->
+            <section id="testimonials">
+                <h2>Testimonials</h2>
+
+                <section>
+                    <h3>Miranda Blake</h3>
+                    <img src="" alt="">
+
+                    <p>Traveling From: London, England</p>
+                    <p>"I traveled here for busioness, but my stay was extended. Now it is my home."</p>
+                </section>
+
+                <section>
+                    <h3>Max Winter</h3>
+                    <img src="" alt="">
+
+                    <p>Traveling From: Berlin, Germany</p>
+                    <p>"Great escape from my reality. Beautiful sunsets, wonderful people, great beer."</p>
+                </section>
+
+                <section>
+                    <h3>Inés Villegoes</h3>
+                    <img src="" alt="">
+
+                    <p>Traveling From: Barcelona, Spain</p>
+                    <p>"A very safe environment for all travelers."</p>
+                </section>
+
+                <section>
+                    <h3>Cameron Lorenzo</h3>
+                    <img src="" alt="">
+
+                    <p>Traveling From: Madrid, Spain</p>
+                    <p>"Live, laugh, love-- everything you need in Majorca."</p>
+                </section>
+            </section>
+
+            <!--About Your Destination-->
+            <section id="about-your-destination">
+                <h2>About Your Destination</h2>
+
+                <section>
+                    <h3>Size</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ruler-2"
+                    width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M17 3l4 4l-14 14l-4 -4z" />
+                        <path d="M16 7l-1.5 -1.5" />
+                        <path d="M13 10l-1.5 -1.5" />
+                        <path d="M10 13l-1.5 -1.5" />
+                        <path d="M7 16l-1.5 -1.5" />
+                    </svg>
+                    <p>Size: 1,405 miles squared</p>
+                </section>
+
+                <section>
+                    <h3>Elevation</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-top-bar"
+                    width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="12" y1="21" x2="12" y2="3" />
+                        <path d="M15 6l-3 -3l-3 3" />
+                        <line x1="9" y1="21" x2="15" y2="21" />
+                    </svg>
+                    <p>Elevation: 4,741 feet</p>
+                </section>
+
+                <section>
+                    <h3>Location</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin"
+                    width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="12" cy="11" r="3" />
+                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+                        />
+                    </svg>
+                    <p>Location: Mediterranean</p>
+                </section>
+
+                <section>
+                    <h3>Population</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="100"
+                    height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                    </svg>
+                    <p>Population: 923,608</p>
                 </section>
             </section>
 
             <section id="contact">
+                <h2>Contact Us</h2>
 
+                <!--I used the action from the form activity in Module 1 to help test my form's data that it sent!-->
+                <form method="post" action="https://wp.zybooks.com/form-viewer.php">
+                    <label for="f-name">First Name</label>
+                    <input type="text" name="f-name" id="f-name" pattern="[A-Za-z]{2,}" title="Full first name" placeholder="John" aria-required="true" required> 
+
+                    <label for="l-name">Last Name</label>
+                    <input type="text" name="l-name" id="l-name" pattern="[A-Za-z]{2,}" title="Full last name" placeholder="Smith" aria-required="true" required> 
+
+                    <fieldset>
+                        <legend>Contact Method</legend>
+
+                        <input type="radio" id="email-pref" name="contact-pref" value="email-pref" checked>
+                        <label for="email-pref">Email</label>
+
+                        <input type="radio" id="text-pref" name="contact-pref" value="text-pref">
+                        <label for="text-pref">Text</label>
+
+                        <input type="radio" id="phone-pref" name="contact-pref" value="phone-pref">
+                        <label for="phone-pref">Phone</label>
+                    </fieldset>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" placeholder="example@email.com" aria-required="true" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone" placeholder="1112223456" pattern="[0-9]{10}" title="1112223456" aria-required="true" required>
+
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" name="destination" list="destination-list" aria-required="true" required>
+                    <datalist id="destination-list">
+                        <option value="Barcelona"></option>
+                        <option value="Granada"></option>
+                        <option value="Ibiza"></option>
+                        <option value="Madrid"></option>
+                        <option value="Majorca"></option>
+                        <option value="Seville"></option>
+                        <option value="Tenerife"></option>
+                        <option value="Valencia"></option>
+                    </datalist>
+
+                    <label for="travel-time">Travel Time</label>
+                    <input type="text" id="travel-time" name="travel-time" list="travel-time-list" aria-required="true" required>
+                    <datalist id="travel-time-list">
+                        <option value="Fall"></option>
+                        <option value="Winter"></option>
+                        <option value="Spring"></option>
+                        <option value="Summer"></option>
+                        <option value="Flexible"></option>
+                    </datalist>
+
+                    <input type="submit" value="Submit Form">
+                </form>
             </section>
 
         </main>

@@ -75,8 +75,12 @@ h1, h2, h3{
     font-family: var(--heading);
 }
 
-h4, p, q, small, nav, button, form, footer a{
+h4, p, q, small, nav, button, form, footer a, input{
     font-family: var(--body-text);
+}
+
+h1, h2, h3, h4, p{
+    padding: 0 30px;
 }
 
 h1{
@@ -87,13 +91,22 @@ h2{
     font-size: 3rem;
 }
 
+h3{
+    font-size: 2rem;
+}
+
 h4{
     text-transform: uppercase;
     font-weight: bold;
 }
 
-nav h2{
-    display: none;
+.sr-only{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
 }
 
 body{
@@ -120,39 +133,133 @@ header{
     background-image: linear-gradient(var(--teal), var(--white));
 }
 
+
+
+nav ul a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--black);
+    font-weight: bold;
+}
+
+nav ul li{
+    background-color: var(--teal);
+    border: 1px solid var(--black);
+    text-align: center;
+    padding: 40px;
+}
+
 #intro{
     background-color: var(--white)
 }
 
-#plan{
-    background-color: var(--yellow);
+#intro #img-grid{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
 }
 
-#plan div section{
-    background-color: var(--blue);
-    border: 1px solid var(--white);
+#plan{
+    background-color: var(--yellow);
+    padding: 60px 0;
+}
+
+#plan div{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+#plan section{
+    background-color: var(--teal);
+    border: 3px solid var(--white);
+    border-radius: 10px;
+    margin: auto;
+    width: 80%;
+    height: 300px;
+    text-align: center;
+    align-items: center;
 }
 
 #testimonials{
     background-color: var(--white);
+    padding: 50px 0;
+}
+
+#testimonials div{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;}
+
+#testimonials section{
+    text-align: center;
+    max-width: 30ch;
 }
 
 #testimonials q{
     font-style: italic;
+    
 }
 
 #about{
     background-color: var(--blue);
 }
 
+#about div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#about section{
+    text-align: center;
+}
+
 #contact{
     background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+}
+
+form, fieldset, #nums, #names{
+    display: flex;
+    flex-direction: column;
+}
+
+form label:not(fieldset label), legend{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.form-required{
+    font-style: italic;
+    font-family: var(--body-text);
+    font-size: 1.15rem;
+}
+
+.required{
+    color: var(--purple);
+    font-weight: 400;
+}
+
+input:required, select{
+    border: 3px solid var(--purple);
 }
 
 footer{
     background-color: var(--light-gray);
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer p{
+    margin-bottom: 10px;
 }
 
 footer a{
     text-decoration: none;
+    color: var(--black);
+    margin: 10px 0;
 }

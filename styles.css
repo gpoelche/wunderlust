@@ -68,6 +68,10 @@ table {
 }
 
 /*GLOBAL STYLES START*/
+html{
+    width: 100%;
+    overflow-x: hidden;
+}
 
 /*GLOBAL VARIABLE FONTS*/
 h1, h2, h3{
@@ -219,7 +223,7 @@ nav ul{
     margin-bottom: 10px;
 }
 
-#intro img{
+#img-grid img{
     width: 100%;
     margin: 10px 0;
 }
@@ -240,16 +244,17 @@ nav ul{
 }
 
 #plan div{
+    padding: 10px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 15px;
+    justify-self: center;
 }
 
 #plan section{
     background-color: var(--teal);
     border: 4px solid var(--white);
     border-radius: 10px;
-    margin: auto;
     width: 325px;
     height: 300px;
     display: grid;
@@ -327,14 +332,14 @@ form, form div{
 }
 
 form div input:not([type^=radio]), select{
-    height: 50px;
+    height: 70px;
     font-size: 1.15rem;
     padding-left: 10px;
 }
 
 /*I used the dev tools here to see that the inputs were actually 58px high, so I overwrote it here to make them the same height*/
 select{
-    height: 58px;
+    height: 78px;
 }
 
 label:not(.raido-label), legend{
@@ -410,6 +415,9 @@ footer a{
 
 /* MEDIUM BREAKPOINT */
 @media (min-width: 768px){
+    /* HEADER STYLES*/
+
+    /* REMOVING MOBILE MENU STYLES, ENABLING LARGER MENU VISIBILITY */
     #menu-toggle label{
         display: none;
     }
@@ -437,15 +445,85 @@ footer a{
         background-color: var(--yellow);
     }
 
+    /* INTRO MEDIUM STYLES */
+
+
+    /* SHARED GRID STYLES FOR PLAN & TESTIMONIALS DIVS*/
+    #plan div, #testimonials div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #testimonials div{
+        justify-self: center;
+        column-gap: 100px;
+    }
+
+    #about div{
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+    }
+
+    /* CONTACT FORM MEDIUM STYLES*/
+    fieldset{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    [type^=submit]{
+        display: block;
+        width: 45%;
+        align-self:flex-end;
+    }
+
+    /* FOOTER MEDIUM STYLES */
     footer{
         flex-direction: row;
-        padding: 10px;
+        padding: 15px;
         justify-content: center;
-        align-items: center;
+        align-items: baseline;
+        gap: 30px;
     }
 }
 
 /*LARGE BREAKPOINT*/
 @media (min-width: 1380px){
+    #plan div{
+        display: flex;
+        flex-direction: row;
+        padding: 75px;
+        gap: 20px;
+    }
 
+    #testimonials div{
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* CONTACT FORM LARGE STYLES*/
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+    }
+
+    [for^="email"]{
+        margin-top: 5px;
+    }
+
+    [type^=submit]{
+        margin-top: 25px;
+    }
+
+    /* FOOTER LARGE STYLES*/
+    footer p{
+        margin-right: auto;
+    }
+
+    footer a{
+        margin-right: 20px;
+    }
 }

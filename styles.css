@@ -74,7 +74,7 @@ h1, h2, h3{
     font-family: var(--heading);
 }
 
-h4, p, q, small, nav, button, form, footer a, input{
+h4, p, q, small, nav, button, form, footer a, input, select, .form-required{
     font-family: var(--body-text);
 }
 
@@ -157,9 +157,10 @@ h1 + p{
     width: 200px;
     padding: 15px 0;
     position: absolute;
-    right: 10px;
+    right: 0px;
     top: 40px;
     text-align: center;
+    cursor: pointer;
 }
 
 nav ul a{
@@ -174,6 +175,7 @@ nav ul li{
     border: 1px solid var(--black);
     text-align: center;
     padding: 40px;
+    cursor: pointer;
 }
 
 nav ul{
@@ -206,7 +208,7 @@ nav ul{
     height: 100vh;
 }
 
-/*BODY STYLES*/
+/* #INTRO STYLES */
 #intro{
     background-color: var(--white);
     margin-bottom: 10px;
@@ -227,6 +229,7 @@ nav ul{
     flex-direction: column;
 }
 
+/* #PLAN STYLES*/
 #plan{
     background-color: var(--yellow);
     padding: 30px 0;
@@ -254,6 +257,7 @@ nav ul{
     text-align: center;
 }
 
+/* #TESTIMONIALS STYLES*/
 #testimonials{
     background-color: var(--white);
     padding: 50px 0;
@@ -275,9 +279,11 @@ nav ul{
     font-style: italic;
 }
 
+/* #ABOUT STYLES */
 #about{
     background-color: var(--blue);
     padding: 25px 0;
+    margin: 0 auto;
 }
 
 #about div{
@@ -297,6 +303,7 @@ nav ul{
     height: 125px;
 }
 
+/* #CONTACT STYLES */
 #contact{
     background-color: var(--white);
     display: flex;
@@ -304,68 +311,44 @@ nav ul{
     padding: 25px 0;
 }
 
-form label, fieldset legend{
-    margin-left: 8%;
-    font-weight: bold;
-    text-transform: uppercase;
+.form-required{
+    font-style: italic;
+    font-size: 1.15rem;
 }
 
-.radio-label{
-    font-weight: normal;
-    text-transform: none;
+/* FORM STYLES FOR CONTACT */
+form{
+    margin: 0 10%;
 }
 
-form, fieldset, #nums, #names, #selects{
+form, form div{
     display: flex;
     flex-direction: column;
 }
 
-.form-required{
-    font-style: italic;
-    font-family: var(--body-text);
+form div input:not([type^=radio]), select{
+    height: 50px;
     font-size: 1.15rem;
+    padding-left: 10px;
+}
+
+/*I used the dev tools here to see that the inputs were actually 58px high, so I overwrote it here to make them the same height*/
+select{
+    height: 58px;
+}
+
+label:not(.raido-label), legend{
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .required{
+    font-weight: normal;
     color: var(--purple);
-    font-weight: 400;
 }
 
-input:not(fieldset input, input[type^=submit]){
-    font-size: 1.15rem;
-    padding: 20px;
-    width: 75%;
-    margin: 0 auto;
-}
-
-input:required, select{
+input:not([type^=submit]), select{
     border: 3px solid var(--purple);
-}
-
-select{
-    font-family: var(--body-text);
-    color: var(--dark-gray);
-    font-size: 1.15rem;
-    width: 84%;
-    padding: 20px;
-}
-/*
-.custom-select{
-    text-align: center;
-}
-*/
-input[type^=submit]{
-    background-color: var(--purple);
-    color: white;
-    font-family: var(--body-text);
-    text-transform: uppercase;
-    font-size: 1.15rem;
-    padding: 20px;
-    width: 75%;
-    margin-top: 20px;
-    border: none;
-    font-weight: bold;
-    align-self: center;
 }
 
 input[type^=radio]{
@@ -379,6 +362,34 @@ input[type^=radio]::after{
     width: 50px;
 }
 
+fieldset{
+    display: grid;
+}
+
+.radio-label{
+    font-weight: normal;
+    text-transform: none;
+    margin-left: 10px;
+}
+
+[type^=radio], select, [type^=submit]{
+    cursor: pointer;
+}
+
+[type^=submit]{
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    background-color: var(--purple);
+    color: var(--white);
+    margin-top: 10px;
+}
+
+form input:not(fieldset input), fieldset, .custom-select{
+    margin-bottom: 20px;
+}
+
+/* FOOTER STYLES */
 footer{
     background-color: var(--light-gray);
     text-align: center;
@@ -397,8 +408,8 @@ footer a{
     margin: 10px 0;
 }
 
-/*MEDIUM BREAKPOINT*/
-@media (min-width: 780px){
+/* MEDIUM BREAKPOINT */
+@media (min-width: 768px){
     #menu-toggle label{
         display: none;
     }
@@ -424,24 +435,6 @@ footer a{
 
     .active{
         background-color: var(--yellow);
-    }
-
-    #plan div{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    }
-
-    #testimonials div{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        align-items: center;
-    }
-
-    #about div{
-        display: flex;
-        flex-direction: row;
     }
 
     footer{

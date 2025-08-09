@@ -82,7 +82,7 @@ h4, p, q, small, nav, button, form, footer a, input, select, .form-required{
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 3.25rem;
     margin-left: 20px;
 }
 
@@ -138,6 +138,7 @@ body{
 header{
     background-image: linear-gradient(var(--teal), var(--white));
     margin-bottom: 60px;
+    padding-bottom: 30px;
 }
 
 header img{
@@ -145,7 +146,7 @@ header img{
     margin-left: -30px;
 }
 
-h1 + p{
+header p{
     width: 25ch;
     font-size: 1.15rem;
     margin-left: 20px;
@@ -300,6 +301,7 @@ nav ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    row-gap: 10px;
 }
 
 #about section{
@@ -307,8 +309,8 @@ nav ul{
 }
 
 #about img{
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
 }
 
 /* #CONTACT STYLES */
@@ -413,6 +415,18 @@ footer a{
 /* MEDIUM BREAKPOINT */
 @media (min-width: 768px){
     /* HEADER STYLES*/
+    h1, header p{
+        justify-self: center;
+    }
+
+    h1{
+        margin-left: -5px;
+        margin-top: -100px;
+    }
+
+    nav{
+        margin-top: 20px;
+    }
 
     /* REMOVING MOBILE MENU STYLES, ENABLING LARGER MENU VISIBILITY */
     #menu-toggle label{
@@ -452,15 +466,18 @@ footer a{
         grid-template-rows: 1fr 1fr;
     }
 
+    /* TESTIMONIALS MEDIUM STYLES*/
     #testimonials div{
         justify-self: center;
         column-gap: 100px;
     }
 
+    /* ABOUT MEDIUM STYLES*/
     #about div{
         display: flex;
         flex-direction: row;
         justify-self: center;
+        gap: 30px;
     }
 
     /* CONTACT FORM MEDIUM STYLES*/
@@ -488,6 +505,32 @@ footer a{
 
 /*LARGE BREAKPOINT*/
 @media (min-width: 1380px){
+    /* HEADER LARGE STYLES*/
+    h1{
+        justify-self: normal;
+        margin-left: 175px;
+    }
+
+    header p{
+        justify-self: normal;
+        margin-left: 175px;
+        width: auto;
+    }
+
+    nav{
+        justify-self: flex-end;
+        position: absolute;
+        top: -20px;
+    }
+
+    nav ul li{
+        width: 140px;
+        margin-left: 15px;
+    }
+
+    /* INTRO LARGE STYLES*/
+
+    /* PLAN LARGE STYLES*/
     #plan div{
         display: flex;
         flex-direction: row;
@@ -495,9 +538,15 @@ footer a{
         gap: 20px;
     }
 
+    /* TESTIMONIALS LARGE STYLES */
     #testimonials div{
         display: flex;
         flex-direction: row;
+    }
+
+    /* ABOUT LARGE STYLES*/
+    #about div{
+        gap: 75px;
     }
 
     /* CONTACT FORM LARGE STYLES*/

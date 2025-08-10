@@ -361,19 +361,51 @@ input:not([type^=submit]), select{
     border: 3px solid var(--purple);
 }
 
+/* CUSTOM RADIO BUTTONS USING MODERNCSS.DEV LINKED IN HTML */
 input[type^=radio]{
-    accent-color: var(--purple);
-    margin: 30px 20px;
+    appearance: none;
+    background-color: var(--white);
+    margin: 0;
+    font: inherit;
+    color: var(--purple);
+    width: 3.15em;
+    height: 3.15em;
+    border: 0.20em solid var(--purple);
+    border-radius: 50%;
+    transform: translateY(0.25em);
+    display: grid;
+    place-content: center;
 }
+
+input[type^=radio]::before{
+    content: "";
+    width: 1.4em;
+    height: 1.4em;
+    border-radius: 50%;
+    transform: scale(0);
+    box-shadow: inset 1em 1em var(--purple);
+}
+
+input[type^=radio]:checked::before{
+    transform: scale(1.5);
+}
+
 
 fieldset{
     display: grid;
 }
 
+fieldset label{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
 .radio-label{
     font-weight: normal;
     text-transform: none;
-    margin-left: 10px;
 }
 
 [type^=radio], select, [type^=submit]{
@@ -457,8 +489,30 @@ footer a{
     }
 
     /* INTRO MEDIUM STYLES */
+    #intro p{
+        margin-bottom: 0;
+    }
 
+    #intro #img-grid{
+        display: grid;
+        grid-template-areas: "one two"
+                             "three three";
 
+        column-gap: 20px;
+        padding: 30px;
+    }
+
+    #img-grid img:first-of-type{
+        grid-area: one;
+    }
+
+    #img-grid img:nth-of-type(2){
+        grid-area: two;
+    }
+
+    #img-grid picture{
+        grid-area: three;
+    }
     /* SHARED GRID STYLES FOR PLAN & TESTIMONIALS DIVS*/
     #plan div, #testimonials div{
         display: grid;
@@ -485,6 +539,10 @@ footer a{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    fieldset label{
+        margin-bottom: 0;
     }
 
     [type^=submit]{
@@ -529,7 +587,25 @@ footer a{
     }
 
     /* INTRO LARGE STYLES*/
+    #intro{
+        display: grid;
+        grid-template-areas: "head img img"
+                             "p img img"
+                             ". img img"
+                             ". img img";
+    }
+    
+    #intro h2{
+        grid-area: head;
+    }
 
+    #intro p{
+        grid-area: p;
+    }
+
+    #intro #img-grid{
+        grid-area: img;
+    }
     /* PLAN LARGE STYLES*/
     #plan div{
         display: flex;
@@ -557,7 +633,7 @@ footer a{
     }
 
     [for^="email"]{
-        margin-top: 5px;
+        margin-top: 27px;
     }
 
     [type^=submit]{

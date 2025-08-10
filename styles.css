@@ -1,9 +1,11 @@
-/*8-6-25 -- GEORGE POELCHER III -- GIT 414 -- PROF. STORM*/
-/*THIS FILE IS FOR EDUCATIONAL PURPOSES ONLY*/
+/* 8-6-25 -- GEORGE POELCHER III -- GIT 414 -- PROF. STORM */
+/* THIS FILE IS FOR EDUCATIONAL PURPOSES ONLY */
+
+/* IMPORTING THE NECESSARY FONTS FOR BRAND GUIDELINES */
 @import url(https://fonts.google.com/share?selection.family=Molle:ital@1%7CMontserrat);
 
 :root{
-    /*COLORS*/
+    /* COLORS */
     --yellow: #f6d64a;
     --teal: #55bcd5;
     --purple: #9b26b0;
@@ -13,11 +15,12 @@
     --white: #ffffff;
     --black: #000000;
 
-    /*TYPOGRAPHY*/
+    /* TYPOGRAPHY */
     --heading: "Molle", sans-serif;
     --body-text: "Montserrat", serif;
 }
 
+/* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -67,12 +70,15 @@ table {
 	border-spacing: 0;
 }
 
-/*GLOBAL STYLES START*/
+/* GLOBAL STYLES START */
+/* STYLES ARE ORGANIZED FROM TOP TO BOTTOM OF PAGE CONTENT */
+/* EXCLUDING THE GLOBAL STYLES FOR FONTS AND SIZING */
+
 html{
     overflow-x: hidden;
 }
 
-/*GLOBAL VARIABLE FONTS*/
+/* GLOBAL VARIABLE FONTS */
 h1, h2, h3{
     font-family: var(--heading);
 }
@@ -134,7 +140,7 @@ body{
   height: auto;
 }
 
-/*HEADER STYLES*/
+/* HEADER STYLES */
 header{
     background-image: linear-gradient(var(--teal), var(--white));
     margin-bottom: 60px;
@@ -152,7 +158,7 @@ header p{
     margin-left: 20px;
 }
 
-/*MOBILE MENU STYLES*/
+/* MOBILE MENU STYLES */
 #toggle{
     display: none;
 }
@@ -215,7 +221,7 @@ nav ul{
     height: 100vh;
 }
 
-/* #INTRO STYLES */
+/* INTRO STYLES */
 #intro{
     background-color: var(--white);
     margin-bottom: 10px;
@@ -236,15 +242,11 @@ nav ul{
     flex-direction: column;
 }
 
-/* #PLAN STYLES*/
+/* PLAN STYLES */
 #plan{
     background-color: var(--yellow);
     margin: 0 auto;
-    padding: 50px 0;
-}
-
-#plan h3{
-    margin-bottom: 20px;
+    padding: 30px 0;
 }
 
 #plan div{
@@ -267,7 +269,7 @@ nav ul{
     text-align: center;
 }
 
-/* #TESTIMONIALS STYLES*/
+/* TESTIMONIALS STYLES */
 #testimonials{
     background-color: var(--white);
     padding: 50px 0;
@@ -289,10 +291,10 @@ nav ul{
     font-style: italic;
 }
 
-/* #ABOUT STYLES */
+/* ABOUT STYLES */
 #about{
     background-color: var(--blue);
-    padding: 50px 0;
+    padding: 30px 0;
 }
 
 #about div{
@@ -313,7 +315,7 @@ nav ul{
     height: 100px;
 }
 
-/* #CONTACT STYLES */
+/* CONTACT STYLES */
 #contact{
     background-color: var(--white);
     display: flex;
@@ -377,7 +379,7 @@ select, .custom-select::after{
 }
 /* CUSTOM SELECT STYLES ENDS */
 
-label:not(.raido-label), legend{
+label:not(.radio-label), legend{
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -476,7 +478,8 @@ footer a{
 
 /* MEDIUM BREAKPOINT */
 @media (min-width: 768px){
-    /* HEADER STYLES*/
+
+    /* HEADER STYLES */
     h1, header p{
         justify-self: center;
     }
@@ -543,20 +546,20 @@ footer a{
     #img-grid picture{
         grid-area: three;
     }
-    /* SHARED GRID STYLES FOR PLAN & TESTIMONIALS DIVS*/
+    /* SHARED GRID STYLES FOR PLAN & TESTIMONIALS DIVS */
     #plan div, #testimonials div{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
 
-    /* TESTIMONIALS MEDIUM STYLES*/
+    /* TESTIMONIALS MEDIUM STYLES */
     #testimonials div{
         justify-self: center;
         column-gap: 100px;
     }
 
-    /* ABOUT MEDIUM STYLES*/
+    /* ABOUT MEDIUM STYLES */
     #about div{
         display: flex;
         flex-direction: row;
@@ -564,7 +567,7 @@ footer a{
         gap: 30px;
     }
 
-    /* CONTACT FORM MEDIUM STYLES*/
+    /* CONTACT FORM MEDIUM STYLES */
     fieldset{
         display: flex;
         flex-direction: row;
@@ -593,7 +596,8 @@ footer a{
 
 /*LARGE BREAKPOINT*/
 @media (min-width: 1380px){
-    /* HEADER LARGE STYLES*/
+
+    /* HEADER LARGE STYLES */
     h1{
         justify-self: normal;
         margin-left: 175px;
@@ -616,7 +620,7 @@ footer a{
         margin-left: 15px;
     }
 
-    /* INTRO LARGE STYLES*/
+    /* INTRO LARGE STYLES */
     #intro{
         display: grid;
         grid-template-areas: "head img img"
@@ -636,7 +640,7 @@ footer a{
     #intro #img-grid{
         grid-area: img;
     }
-    /* PLAN LARGE STYLES*/
+    /* PLAN LARGE STYLES */
     #plan div{
         display: flex;
         flex-direction: row;
@@ -650,12 +654,12 @@ footer a{
         flex-direction: row;
     }
 
-    /* ABOUT LARGE STYLES*/
+    /* ABOUT LARGE STYLES */
     #about div{
         gap: 75px;
     }
 
-    /* CONTACT FORM LARGE STYLES*/
+    /* CONTACT FORM LARGE STYLES */
     form{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -670,7 +674,7 @@ footer a{
         margin-top: 25px;
     }
 
-    /* FOOTER LARGE STYLES*/
+    /* FOOTER LARGE STYLES */
     footer p{
         margin-right: auto;
     }

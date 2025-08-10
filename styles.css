@@ -342,10 +342,40 @@ form div input:not([type^=radio]), select{
     padding-left: 10px;
 }
 
-/*I used the dev tools here to see that the inputs were actually 58px high, so I overwrote it here to make them the same height*/
+/* CUSTOM SELECT STYLES HELP FROM MODERNDEV.CSS LINKED IN HTML*/
 select{
+    appearance: none;
     height: 78px;
+    width: 100%;
 }
+
+.custom-select{
+    width: 100%;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: var(--white);
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+}
+
+.custom-select::after{
+    content: "";
+    width: 0.8em;
+    height: 0.8em;
+    margin-right: 20px;
+    background-color: var(--purple);
+    clip-path: polygon(11% 41%, 49% 76%, 88% 39%, 100% 49%, 49% 98%, 0 53%);
+    justify-self: end;
+}
+
+select, .custom-select::after{
+    grid-area: select;
+}
+/* CUSTOM SELECT STYLES ENDS */
 
 label:not(.raido-label), legend{
     text-transform: uppercase;
@@ -389,7 +419,7 @@ input[type^=radio]::before{
 input[type^=radio]:checked::before{
     transform: scale(1.5);
 }
-
+/* CUSTOM RADIO BUTTONS ENDS */
 
 fieldset{
     display: grid;
